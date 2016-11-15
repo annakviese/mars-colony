@@ -7,8 +7,7 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'hello!';
-  description = 'https://www.google.ca/';
+  title = 'app works!';
 }
 
 
