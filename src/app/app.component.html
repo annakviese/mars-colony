@@ -1,6 +1,17 @@
+
+<div class = "app-container">
 <h1>
   {{title}} 
-  <app-list-test>Loading list...</app-list-test>
 </h1>
 
-<a href = "{{description}}"> Google </a>
+
+  <nav>
+    <!--active is a css class -->
+    <a routerLink="/welcome" routerLinkActive="active">Welcome</a>  
+    <a routerLink="/register" routerLinkActive="active">Register</a>
+    <a routerLink="/encounters" routerLinkActive="active">Encounters</a>
+    <a routerLink="/report" routerLinkActive="active">Report</a>
+  </nav>
+<router-outlet></router-outlet>
+
+</div>  <!--app-countainer -->

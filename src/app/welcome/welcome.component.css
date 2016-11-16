@@ -1,0 +1,20 @@
+h1 {
+ color: white;
+ font-size: 36px;
+ text-align: center;
+ margin-top: 10%;
+}
+
+.enter {
+    margin: 0 auto;
+    font-size: 24px;
+    padding: 10px;
+    border: 1px solid white;
+    width: 200px;
+}
+.enter a {
+        color: white;
+        text-decoration: none;
+        text-align: center;
+    }
+
