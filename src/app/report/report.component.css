@@ -1,0 +1,48 @@
+.app-container {
+    background-color: black;
+}
+h1 {
+ color: white;
+ font-size: 36px;
+ text-align: center;
+ margin-top: 10%;
+}
+
+/*report form styles*/
+.report {
+    padding: 10% 0;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.report input , report option , select{
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    color: white;
+    font-size: 20px;
+}
+
+select {
+    /*color: grey;*/
+    border-radius: 0;
+}
+
+button {
+    background-color: grey;
+    color: black;
+    margin: 10% auto;
+    font-size: 24px;
+    padding: 10px;
+    border: 1px solid black;
+    width: 200px;
+    text-align: center;
+}
+
+button:active {
+    background-color: green;
+}

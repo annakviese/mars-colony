@@ -1,25 +1,22 @@
 <h1>
   Register 
 </h1>
-<p>{{ Colonist }}</p>
 
-<form class = "register">
- <input type="text" placeholder="Name" [(ngModel)]="colonist.name" name="name"/>
+<form [formGroup]="registerForm" class = "register" (ngSubmit)="onSubmit($event)">
+ <input type="text" placeholder="Name" formControlName = "name" />
 
- <input type="number" placeholder="Age" [(ngModel)]="colonist.age" name="age"/>
+ <input type="number" placeholder="Age" formControlName = "age"  />
  
- <select [(ngModel)]="colonist.job_id" name="job_id">
+ <select formControlName ="job_id" >
     <option [value]="NO_JOB_SELECTED">-- Select a job --</option> 
     <option *ngFor="let job of marsJobs" [value] = "job.id"> {{ job.name }} </option>
     
 </select>
 
-<button [disabled] = "!jobSelected" type="" > Register </button> 
+<button > Check-In </button> 
 <!--<div class = "check-in">
   <a routerLink="/encounters" routerLinkActive="active">Check-In</a>
   <a href = "http://localhost:4200/encounters"> Check-In</a>
 </div>-->
-
-{{ colonist.name }} - {{ colonist.age }} | {{ colonist.job_id }}
 
 </form>

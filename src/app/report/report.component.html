@@ -1,3 +1,19 @@
-<p>
-  report works!
-</p>
+ <div class = 'app-container'>
+ <h1>
+  Report
+</h1>
+
+<form [formGroup]="reportForm" class = "report" (ngSubmit)="onSubmit($event)">
+ 
+   <select formControlName = "atype">
+    <option [value]="NO_ALIEN_SELECTED">Select an alien</option> 
+    <option *ngFor="let a of marsAliens" [value] = "a.type"> {{ a.type }} </option>
+</select>
+
+
+<textarea rows = "10" cols = "" placeholder="Action taken" formControlName = "action"></textarea>
+<button > Report </button> 
+
+
+</form> 
+</div> <!-- app container -->

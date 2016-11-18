@@ -1,14 +1,20 @@
 // create classes for Mars Colony 
 
-export class Encounter {
+export class NewEncounter {
     constructor(
-      public id: number,
-      public date: string,
-      public colonist_id: number,
-      //report encounter 
-      public atype: string,
-      public action: string
-    ){}
+        public action: string,
+        public atype: string,
+        public colonist_id: number,
+        public date: string,  
+    ){} 
+}
+
+export interface Encounter {
+    id: number,
+    date: string,
+    colonist_id: number,
+    atype: string,
+    action: string,
 }
 
 export class Job { 
@@ -25,8 +31,6 @@ export class NewColonist {
       public name: string,
       public age: number,
       public job_id: string,
-      
-      
     ){}
 }
 
@@ -36,15 +40,14 @@ interface Colonist {
     age: number;
     job: Job;
 }
-//getting back this object
-export class Alien {
-    constructor(
-        public type: string,
-        public submitted_by: string,
-        public id: number,
-        public description: string
-        ){}
-    }
+
+
+export interface Alien {
+        type: string,
+        submitted_by: string,
+        id: number,
+        description: string,
+}
 
 
 
