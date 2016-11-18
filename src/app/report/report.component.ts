@@ -10,7 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-report',
   templateUrl: './report.component.html',
-  styleUrls: ['./report.component.css'],
+  styleUrls: ['./report.component.scss'],
   providers: [AliensService, EncountersService],
 })
 
@@ -65,9 +65,10 @@ private getDate(){
   //console.log('Ok, let\'s register this encounter:');
 
 
-  this.encountersService.submitEncounter(encounter).subscribe( () => {
-    //console.log('success');
-       this.router.navigate(['/encounters']);
+  this.encountersService.submitEncounter(encounter).subscribe( (colonist_id) => {
+
+     console.log (sessionStorage.getItem('id'));
+       this.router.navigate(['../encounters']);
 
   }, (err) => {
     console.log(err);

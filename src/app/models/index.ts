@@ -34,7 +34,7 @@ export class NewColonist {
     ){}
 }
 
-interface Colonist {
+export interface Colonist {
     name: string;
     id: number;
     age: number;

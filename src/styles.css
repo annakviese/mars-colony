@@ -2,6 +2,3 @@
 
 @import "assets/css/reset.css" 
 
-input :focus{
-    outline: none;
-}
