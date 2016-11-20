@@ -1,26 +1,17 @@
 @import "../shared/mixins.scss" ;
 
-.app-container {
+.notfound-container {
     @include container-main;
     @include mars-background;
     
     h1 {
         @include heading;
     }   
-    h2 {
-        @include heading;
-        font-size: 24px;
-    }
+   
     .heading {
         margin: 10%;
     }
-
     .pulsing-button {
         @include pulsing-button;
     }
-
-    .instructions {
-        align-self: center;
-    }
-
 }

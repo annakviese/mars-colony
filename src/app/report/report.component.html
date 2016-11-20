@@ -1,17 +1,19 @@
- <div class = 'app-container'>
-  <h1>Report </h1>
+<div class = 'report-container'>
+    <div class = "heading">
+    <h1>report encounter </h1>
+    <p>safety on Mars is your responsibility</p>
+    </div>
 
-  <form [formGroup]="reportForm" class = "report" (ngSubmit)="onSubmit($event)">
+    <form [formGroup]="reportForm" class = "report" (ngSubmit)="onSubmit($event)">
   
-  <select formControlName = "atype">
-      <option [value]="NO_ALIEN_SELECTED">Select an alien</option> 
-      <option *ngFor="let a of marsAliens" [value] = "a.type"> {{ a.type }} </option>
-  </select>
+        <select formControlName = "atype">
+            <option [value]="NO_ALIEN_SELECTED">Select an alien</option> 
+            <option *ngFor="let a of marsAliens" [value] = "a.type"> {{ a.type }} </option>
+        </select>
 
+        <textarea rows = "10" cols = "" placeholder="Action taken" formControlName = "action"></textarea>
 
-  <textarea rows = "10" cols = "" placeholder="Action taken" formControlName = "action"></textarea>
-  <button > Report </button> 
+        <button > submit report </button> 
+    </form> 
 
-
-  </form> 
-</div> <!-- app container -->
+</div> <!-- report container -->

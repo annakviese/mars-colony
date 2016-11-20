@@ -1,45 +1,32 @@
-.app-container {
-    background-color: black;
+@import "../shared/mixins.scss" ;
 
-h1 {
- color: white;
- font-size: 36px;
- text-align: center;
- margin-top: 10%;
-}
+.report-container {
+    background-color: black;
+    @include container-main;
+    
+
+    h1 {
+    @include heading; 
+    }
+    p {
+    @include paragraph;       
+    }
+    }
+    
 
 
 /*report form styles*/
 .report {
-    padding: 10% 0;
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    height: 100vh;
-    margin: 0 auto;
+    @include form;
 
-    input , option , select{
-        height: 50px;
-        background-color: transparent;
-        border: none;
-        border-bottom: 1px solid lightgrey;
-        color: white;
-        font-size: 20px;
-    }
-}
 
-button {
-    background-color: grey;
-    color: black;
-    margin: 10% auto;
-    font-size: 24px;
-    padding: 10px;
-    border: 1px solid black;
-    width: 200px;
-    text-align: center;
+    textarea::-webkit-input-placeholder {
+        color: red;
+        }
     
-    :active {
-    background-color: green;
+
+    button {
+        @include button;
     }
 }
-}
+

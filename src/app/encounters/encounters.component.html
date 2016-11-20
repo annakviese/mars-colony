@@ -1,16 +1,25 @@
-<h1>
-  Encounters
-</h1>
+<div class = 'encounters-container'>
 
-<ul class = "encounter-list">
-  <li *ngFor="let a of marsEncounters">
-    <div> 
-     Type: {{ a.atype }} , Date: {{ a.date }} , Action: {{ a.action }}
-    </div>
-  </li>
-</ul>
+  <div class = 'heading'>  
+    <h1>
+      Encounters
+    </h1>
+  </div>
+  
+  <ul class = "encounter-list">
+    <li *ngFor="let a of marsEncounters">
+      <div> 
+      Type: {{ a.atype }} , Date: {{ a.date }} , Action: {{ a.action }}
+      </div>
+    </li>
+  </ul>
 
-<div class = "report-button" (click)="onClick($event)">
-  Report 
-</div> 
+  <footer>
+    <div class = "button" (click)="onClick($event)">
+      Report 
+    </div> 
+  </footer>
+
+
+</div>
 

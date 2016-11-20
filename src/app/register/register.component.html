@@ -1,24 +1,23 @@
-<div class = 'app-container'>
-<h1>
-  Register 
-</h1>
+<div class = 'register-container'>
+  <div class = 'heading'>
+    <h1>
+      Register 
+    </h1>
+  </div>
 
-<form [formGroup]="registerForm" class = "register" (ngSubmit)="onSubmit($event)">
- <input type="text" placeholder="Name" formControlName = "name" />
+  <form [formGroup]="registerForm" class = "register" (ngSubmit)="onSubmit($event)">
+    <input type="text" placeholder="Name" formControlName = "name" />
 
- <input type="number" placeholder="Age" formControlName = "age"  />
- 
- <select formControlName ="job_id" >
-    <option [value]="NO_JOB_SELECTED">-- Select a job --</option> 
-    <option *ngFor="let job of marsJobs" [value] = "job.id"> {{ job.name }} </option>
+    <input type="number" placeholder="Age" formControlName = "age"  />
     
-</select>
+    <select formControlName ="job_id" >
+        <option [value]="NO_JOB_SELECTED">-- Select a job --</option> 
+        <option *ngFor="let job of marsJobs" [value] = "job.id"> {{ job.name }} </option>
+        
+    </select>
 
-<button > Check-In </button> 
-<!--<div class = "check-in">
-  <a routerLink="/encounters" routerLinkActive="active">Check-In</a>
-  <a href = "http://localhost:4200/encounters"> Check-In</a>
-</div>-->
-</form>
+    <button > Check-In </button> 
+       
+  </form>
 
-</div> <!-- app-container --> 
+</div> <!--register-container --> 
