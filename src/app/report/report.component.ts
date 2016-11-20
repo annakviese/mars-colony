@@ -1,5 +1,5 @@
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding,trigger,transition,animate,style,state} from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators,ValidatorFn, AbstractControl } from '@angular/forms';
 import { Alien , NewEncounter } from '../models';
 import AliensService from '../services/aliens.service';
@@ -12,9 +12,48 @@ import { Router, ActivatedRoute } from '@angular/router';
   templateUrl: './report.component.html',
   styleUrls: ['./report.component.scss'],
   providers: [AliensService, EncountersService],
+   animations: [
+    trigger('routeAnimation', [
+      state('*',
+        style({
+          width: '100%',
+          opacity: 1,
+          transform: 'translateY(0)'
+        })
+      ),
+      transition('void => *', [
+        style({
+          width: '100%',
+          opacity: 0,
+          transform: 'translateY(-100%)'
+        }),
+        animate('1s ease-out')
+      ]),
+      transition('* => void', [
+        animate('1s ease-in', style({
+          width: '100%',
+          opacity: 0,
+          transform: 'translateY(100%)'
+        }))
+      ])
+    ])
+  ]
 })
 
 export class ReportComponent implements OnInit {
+
+  @HostBinding('@routeAnimation') get routeAnimation() {
+    return true;
+  }
+
+  @HostBinding('style.display') get display() {
+    return 'block';
+  }
+
+  @HostBinding('style.position') get position() {
+    return 'absolute';
+  }
+
 
   encounter: NewEncounter;
   marsAliens: Alien[];

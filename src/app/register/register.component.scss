@@ -2,7 +2,7 @@
 
 .register-container {
     @include container-main;
-    background-color: #4c0305;
+    @include mars-background;
 
     h1 {
     @include heading;
@@ -21,5 +21,7 @@
         select::-webkit-input-placeholder {
         color: red;
         }
+
+        
     }
 }
