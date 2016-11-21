@@ -1,4 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import "assets/css/reset.css" 
+@import "assets/css/reset.css";
+@import "assets/css/fonts.css";
 
+body {
+  background-color: black;
+  color: white;
+  font: 18px 'Roboto', sans-serif;
+}

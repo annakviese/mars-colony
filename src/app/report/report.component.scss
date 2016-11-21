@@ -19,9 +19,13 @@
 .report {
     @include form;
 
+    textarea {
+        font-size: 18px;
+    }
 
     textarea::-webkit-input-placeholder {
         color: red;
+        font-size: 18px;
         }
     
 
