@@ -1,31 +1,22 @@
-# MarsColony
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.19-3.
+## Mars Colony App
+![Alt text](https://github.com/annakviese/mars-colony/blob/master/documentation/mars-colony.png)
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+#### About
+The Mars Colony App was created in order to understand how to build build mobile apps using Angular 2 and Typescript. 
+This app allows to register user id in the session storage and get the id back when a report is created by the same user. 
+I have added an animation when switching between the different states. 
 
-## Code scaffolding
+#### Technology Used
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class`.
+* Angular 2
+* Typescript 
+* CSS / CSS3
+* SASS 
+* HTML/ HTML 5
 
-## Build
+#### Improvements 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Deploying to Github Pages
-
-Run `ng github-pages:deploy` to deploy to Github Pages.
-
-## Further help
-
-To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* I would love to add animated border color when input is invalid. 
+* Create a more consistent design throughout the app.
+* Add animation to the circle on the welcome component. 
